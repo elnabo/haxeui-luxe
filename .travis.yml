@@ -1,0 +1,25 @@
+sudo: false
+language: haxe
+
+os:
+  - linux
+
+haxe:
+  - "3.2.1"
+  - development
+
+sudo: true
+
+before_install:
+    - git clone https://github.com/haxeui/haxeui-core.git --depth=1
+    - haxelib dev haxeui-core haxeui-core
+
+install:
+    - haxelib install hscript
+    - haxelib install luxe
+    - haxelib install snow
+    - haxelib dev haxeui-luxe $TRAVIS_BUILD_DIR
+
+
+script:
+    - haxelib run flow build web --release
