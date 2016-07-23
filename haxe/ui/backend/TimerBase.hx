@@ -5,7 +5,7 @@ class TimerBase {
     public function new(delay:Int, callback:Void->Void) {
         _timer = Luxe.timer.schedule(delay * 1000, callback);
     }
-    
+
     public function stop() {
         _timer.stop();
     }

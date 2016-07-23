@@ -2,9 +2,9 @@ package haxe.ui.backend;
 
 class AppBase {
     public function new() {
-        
+
     }
-    
+
     private function build() {
     }
 
@@ -16,8 +16,8 @@ class AppBase {
     private function init(callback:Void->Void, onEnd:Void->Void = null) {
         callback();
     }
-    
+
     public function start() {
-        
+
     }
 }
