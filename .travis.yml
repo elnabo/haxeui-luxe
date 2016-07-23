@@ -16,6 +16,7 @@ install:
     - haxelib install hscript
     - haxelib install luxe
     - haxelib install snow
+    - haxelib install flow
     - haxelib dev haxeui-luxe $TRAVIS_BUILD_DIR
 
 
