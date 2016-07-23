@@ -14,9 +14,9 @@ before_install:
 
 install:
     - haxelib install hscript
-    - haxelib install luxe
-    - haxelib install snow
-    - haxelib install flow
+    - haxelib git luxe https://github.com/underscorediscovery/luxe
+    - haxelib git snow https://github.com/underscorediscovery/snow
+    - haxelib git flow https://github.com/underscorediscovery/flow
     - haxelib dev haxeui-luxe $TRAVIS_BUILD_DIR
 
 
