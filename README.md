@@ -3,7 +3,7 @@
 </p>
 
 [![Build Status](https://travis-ci.org/haxeui/haxeui-luxe.svg?branch=master)](https://travis-ci.org/haxeui/haxeui-luxe)
-[![Support this project on Patreon](https://dl.dropboxusercontent.com/u/26678671/patreon_button.png)](https://www.patreon.com/kha)
+[![Support this project on Patreon](https://dl.dropboxusercontent.com/u/26678671/patreon_button.png)](https://www.patreon.com/haxeui)
 
 <h2>haxeui-luxe</h2>
 `haxeui-luxe` is the `luxe` backend for HaxeUI.
