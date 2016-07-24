@@ -8,6 +8,10 @@
 <h2>haxeui-luxe</h2>
 `haxeui-luxe` is the `luxe` backend for HaxeUI.
 
+<p align="center">
+	<img src="https://github.com/haxeui/haxeui-luxe/raw/master/screen.png" />
+</p>
+
 <h2>Installation</h2>
  * `haxeui-luxe` has a dependency to <a href="https://github.com/haxeui/haxeui-core">`haxeui-core`</a>, and so that too must be installed.
  * `haxeui-luxe` also has a dependency to <a href="http://luxeengine.com/docs/index.html">luxe</a>, please refer to the installation instructions on their <a href="http://luxeengine.com/docs/index.html">site</a>.
