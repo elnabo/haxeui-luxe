@@ -54,7 +54,6 @@ class ComponentBase {
     }
 
     private function handleReady() {
-
     }
 
     private function handlePreReposition() {
@@ -234,7 +233,7 @@ class ComponentBase {
     }
 
     private function handleRemoveComponent(child:Component, dispose:Bool = true):Component {
-
+trace("remove - " + Type.getClassName(Type.getClass(child)) + ", " + dispose);
         if (dispose == true) {
             __children.remove(child);
             child.dispose();
@@ -284,6 +283,7 @@ class ComponentBase {
             _textInput.dispose();
         }
         if (_imageDisplay != null) {
+            trace("IMAGE DISPOSE: " + Type.getClassName(Type.getClass(this)));
             _imageDisplay.dispose();
         }
 

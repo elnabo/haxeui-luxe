@@ -107,6 +107,7 @@ class ImageDisplayBase {
         _imageWidth = _imageInfo.width;
         _imageHeight = _imageInfo.height;
         aspectRatio = _imageWidth / _imageHeight;
+        updateParentWithClip();
         return value;
     }
 
@@ -114,6 +115,18 @@ class ImageDisplayBase {
         if (_sprite != null) {
             _sprite.destroy(true);
             _sprite = null;
+        }
+    }
+    
+    // this might be ill concieved
+    private function updateParentWithClip() {
+        var p:Component = cast parent;
+        while (p != null) {
+            if (p.clipRect != null) {
+                p.invalidateDisplay();
+                break;
+            }
+            p = p.parentComponent;
         }
     }
 }

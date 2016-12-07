@@ -36,13 +36,22 @@ class ScreenBase {
 
     private var _topLevelComponents:Array<Component> = new Array<Component>();
     public function addComponent(component:Component) {
-        _topLevelComponents.push(component);
+        if (_topLevelComponents.indexOf(component) != -1) {
+            component.show();
+        } else {
+            _topLevelComponents.push(component);
+        }
         resizeComponent(component);
         //component.dispatchReady();
     }
 
+    @:access(haxe.ui.backend.ComponentBase)
     public function removeComponent(component:Component) {
+        /*
         _topLevelComponents.remove(component);
+        component.dispose();
+        */
+        component.hide();
     }
 
     private function resizeComponent(c:Component) {

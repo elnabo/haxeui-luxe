@@ -86,6 +86,7 @@ class TextDisplayBase {
                 _font = font;
                 dispose(); // since were changing fonts, lets recreate the text
                 if (parent != null) {
+                    updateParentWithClip();
                     parent.update();
                     cast(parent, Component).invalidateLayout();
                     // TODO: doesnt seem right to have to invalidate the parents parent - layout should have done that
@@ -113,6 +114,7 @@ class TextDisplayBase {
         _fontSize = value;
         if (parent != null) {
             //parent.paint();
+            updateParentWithClip();
             parent.update();
             cast(parent, Component).invalidateLayout();
             // TODO: doesnt seem right to have to invalidate the parents parent - layout should have done that
@@ -125,6 +127,18 @@ class TextDisplayBase {
         return value;
     }
 
+    // this might be ill concieved
+    private function updateParentWithClip() {
+        var p:Component = cast parent;
+        while (p != null) {
+            if (p.clipRect != null) {
+                p.invalidateDisplay();
+                break;
+            }
+            p = p.parentComponent;
+        }
+    }
+    
     public function hide() {
         if (_text != null) {
             _text.visible = false;
