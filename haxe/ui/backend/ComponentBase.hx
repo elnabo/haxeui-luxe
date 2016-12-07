@@ -216,6 +216,10 @@ class ComponentBase {
         return d;
     }
 
+    private function handleSetComponentIndex(child:Component, index:Int) {
+        
+    }
+    
     private var _depth:Float = 1;
     private var __children:Array<ComponentBase> = new Array<ComponentBase>();
     private function handleAddComponent(child:Component):Component {
