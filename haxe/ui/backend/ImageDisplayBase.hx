@@ -117,7 +117,7 @@ class ImageDisplayBase {
             _sprite = null;
         }
     }
-    
+
     // this might be ill concieved
     private function updateParentWithClip() {
         var p:Component = cast parent;

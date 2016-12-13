@@ -30,7 +30,7 @@ class ScreenBase {
     private function get_dpi():Float {
         return 72;
     }
-    
+
     public var focus(get, set):Component;
     private function get_focus():Component {
         return null;
@@ -40,9 +40,9 @@ class ScreenBase {
     }
 
     private function handleSetComponentIndex(child:Component, index:Int) {
-        
+
     }
-    
+
     private var _topLevelComponents:Array<Component> = new Array<Component>();
     public function addComponent(component:Component) {
         if (_topLevelComponents.indexOf(component) != -1) {

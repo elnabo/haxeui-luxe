@@ -138,7 +138,7 @@ class TextDisplayBase {
             p = p.parentComponent;
         }
     }
-    
+
     public function hide() {
         if (_text != null) {
             _text.visible = false;
