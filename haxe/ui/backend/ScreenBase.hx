@@ -39,6 +39,8 @@ class ScreenBase {
         return value;
     }
 
+    public var title:String;
+
     private function handleSetComponentIndex(child:Component, index:Int) {
 
     }
